@@ -1,8 +1,8 @@
 # i3-gaps and i3-wm compatible..
 
 # Gaps specification.
-smart_gaps on
-smart_borders on
+# smart_gaps on
+# smart_borders on
 
 # The MOD Key.
 set $mod Mod4
