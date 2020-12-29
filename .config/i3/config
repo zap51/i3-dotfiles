@@ -234,5 +234,3 @@ bindsym $mod+Return exec termite
 bindsym $mod+w exec "/usr/sbin/brave"
 bindsym $mod+n exec "/usr/sbin/pcmanfm"
 bindsym Print exec "scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png"
-
-
