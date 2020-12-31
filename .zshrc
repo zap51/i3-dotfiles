@@ -110,8 +110,6 @@ function ff()
     find . -type f -iname '*'"$*"'*' -ls ;
 }
 
-
-
 function sysinfo()   # Get current host related info.
 {
     echo -e "\n${BRed}System Informations:$NC " ; uname -a
@@ -157,7 +155,6 @@ function extract {
     fi
 fi
 }
-
 
 # Creates an archive (*.tar.gz) from given directory.
 function maketar() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }
