@@ -88,6 +88,7 @@ On_White='\e[47m'       # White
 
 NC="\e[m"               # Color Reset
 
+
 ### Set prompt
 ##############
 PR_NO_COLOR="%{$terminfo[sgr0]%}"
