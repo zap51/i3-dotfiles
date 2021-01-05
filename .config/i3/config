@@ -88,9 +88,6 @@ set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
 
-# Empty workspaces.
-# bindsym $mod+s exec --no-startup-id ~/.config/i3/scripts/empty_workspace.sh
-
 # Bind program to workspaces, focus and nofocus when spanned.
 assign [class="Termite"] $ws1
 for_window [class=Termite] focus
@@ -147,7 +144,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # Lock the system.
-bindsym $mod+l exec i3lock -i /usr/share/backgrounds/archlinux/wave.png -t -f
+bindsym $mod+l exec i3lock -i ~/.config/i3/scr_lck.png -t -f 
 
 # Exit i3-wm.
 bindsym $mod+Shift+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
