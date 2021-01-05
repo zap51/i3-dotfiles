@@ -177,10 +177,9 @@ format-charging = "<ramp-capacity> <label-charging> CHR"
 format-discharging = <ramp-capacity> <label-discharging>
 format-full-prefix = " "
 
-ramp-capacity-0 = "  "
-ramp-capacity-1 = " "
-ramp-capacity-2 = " "
-ramp-capacity-3 = ""
+ramp-capacity-0= " "
+ramp-capacity-1 = " "
+ramp-capacity-2 = ""
 
 [module/temperature]
 type = internal/temperature
