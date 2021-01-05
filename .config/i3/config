@@ -82,25 +82,25 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # Workspaces.
-set $ws2 ""
-set $ws3 ""
-set $ws4 ""
-set $ws5 ""
-set $ws6 ""
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
 
 # Empty workspaces.
-bindsym $mod+s exec --no-startup-id ~/.config/i3/scripts/empty_workspace.sh
+# bindsym $mod+s exec --no-startup-id ~/.config/i3/scripts/empty_workspace.sh
 
 # Bind program to workspaces, focus and nofocus when spanned.
-assign [class="Termite"] $ws2
+assign [class="Termite"] $ws1
 for_window [class=Termite] focus
-assign [class="(?i)brave"] $ws3
+assign [class="(?i)brave"] $ws2
 for_window [class=(?i)brave] focus
-assign [class="(?i)Pcmanfm"] $ws4
+assign [class="(?i)Pcmanfm"] $ws3
 for_window [class=(?i)Pcmanfm] focus
-assign [class="(?i)Zoom"] $ws5
+assign [class="(?i)Zoom"] $ws4
 for_window [class=(?i)Zoom] focus
-assign [class="TelegramDesktop"] $ws6
+assign [class="TelegramDesktop"] $ws5
 for_window [class=TelegramDesktop] focus
 
 # Autostart applications.
@@ -127,14 +127,18 @@ bindsym --whole-window --border $mod+shift+button4 resize shrink width 5 px or 5
 bindsym --whole-window --border $mod+shift+button5 resize grow width 5 px or 5 ppt
 
 # Switch to workspace.
+bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
 bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
 
 # Move focused container to workspace.
+bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
 bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
 
 # Reload the configuration file.
 bindsym $mod+Shift+c reload
@@ -191,19 +195,22 @@ client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-col
 client.urgent           $urgent-bg-color   $urgent-bg-color   $text-color          $indicator-color
 
 # The i3blocks as the bar.
-bar {
-    status_command i3blocks -c ~/.config/i3/i3blocks.conf 
-    position bottom
-    colors {
-	separator          #666666
-	background         #000000
-        statusline         #dddddd
-        focused_workspace  #0088CC #0088CC #ffffff
-        active_workspace   #333333 #333333 #ffffff
-        inactive_workspace #333333 #333333 #888888
-        urgent_workspace   #2f343a #900000 #ffffff
-    }
-}
+#bar {
+#    status_command i3blocks -c ~/.config/i3/i3blocks.conf 
+#    position bottom
+#    colors {
+#	separator          #666666
+#	background         #000000
+#        statusline         #dddddd
+#        focused_workspace  #0088CC #0088CC #ffffff
+#        active_workspace   #333333 #333333 #ffffff
+#        inactive_workspace #333333 #333333 #888888
+#        urgent_workspace   #2f343a #900000 #ffffff
+#    }
+#}
+
+# Polybar.
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Volume Control.
 bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
