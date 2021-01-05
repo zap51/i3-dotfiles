@@ -13,7 +13,7 @@ workspace_layout default
 # Do not show titlebar on windows.
 new_window 1pixel
 
-# Get auth. work done with polkit-gnome
+# Get auth. work done with polkit-gnome.
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # Font for window titles. Same for the i3bar/i3blocks.
@@ -193,21 +193,6 @@ client.focused          $bg-color          $bg-color          $text-color       
 client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color $indicator-color
 client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color $indicator-color
 client.urgent           $urgent-bg-color   $urgent-bg-color   $text-color          $indicator-color
-
-# The i3blocks as the bar.
-#bar {
-#    status_command i3blocks -c ~/.config/i3/i3blocks.conf 
-#    position bottom
-#    colors {
-#	separator          #666666
-#	background         #000000
-#        statusline         #dddddd
-#        focused_workspace  #0088CC #0088CC #ffffff
-#        active_workspace   #333333 #333333 #ffffff
-#        inactive_workspace #333333 #333333 #888888
-#        urgent_workspace   #2f343a #900000 #ffffff
-#    }
-#}
 
 # Polybar.
 exec_always --no-startup-id ~/.config/polybar/launch.sh
