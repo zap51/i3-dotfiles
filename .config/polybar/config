@@ -10,7 +10,7 @@ alert = #bd2c40
 width = 100%
 height = 17
 radius = 0.0
-fixed-center = false
+fixed-center = flase
 bottom = true
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -111,8 +111,7 @@ interface = wlp6s0
 interval = 2.0
 label-connected = "   %downspeed%   %upspeed%"
 label-disconnected = disconnected
-label-connected-foreground = #EE82EE
-label-disconnected-foreground = #66ffffff
+label-connected-foreground = #fc6b03
 
 [module/wlan]
 type = internal/network
@@ -220,6 +219,8 @@ menu-0-1 = power off
 menu-0-1-exec = systemctl poweroff
 menu-0-2 = suspend
 menu-0-2-exec = systemctl suspend
+menu-0-3 = logout
+menu-0-3-exec = i3-msg exit
 
 [settings]
 screenchange-reload = true
