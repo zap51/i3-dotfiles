@@ -112,6 +112,7 @@ interval = 2.0
 label-connected = "   %downspeed%   %upspeed%"
 label-disconnected = disconnected
 label-connected-foreground = #EE82EE
+label-disconnected-foreground = #66ffffff
 
 [module/wlan]
 type = internal/network
