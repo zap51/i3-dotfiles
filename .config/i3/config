@@ -215,8 +215,8 @@ bindsym XF86AudioPrev exec playerctl previous
 # bindsym $mod+m exec "/usr/local/bin/switch-audio-port"
 
 # Sreen brightness controls.
-bindsym XF86MonBrightnessUp exec xbacklight -inc 3
-bindsym XF86MonBrightnessDown exec xbacklight -dec 3
+bindsym XF86MonBrightnessUp exec xbacklight -inc 2
+bindsym XF86MonBrightnessDown exec xbacklight -dec 2
 
 # Application shortcuts.
 bindsym $mod+Return exec termite
