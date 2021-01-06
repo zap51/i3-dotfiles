@@ -102,7 +102,7 @@ interval = 6
 format = <label>
 format-prefix = "  "
 format-prefix-foreground = #32CD32
-label = %mb_used%
+label = %percentage_used%%
 label-foreground = #32CD32
 
 [module/network_speed]
