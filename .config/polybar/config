@@ -231,7 +231,7 @@ label = %output%
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-prefix = " "
-format-prefix-foreground = #ffbb00
+format-prefix-foreground = #ff0000
 
 [settings]
 screenchange-reload = true

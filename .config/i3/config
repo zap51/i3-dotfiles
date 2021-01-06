@@ -101,8 +101,8 @@ assign [class="TelegramDesktop"] $ws5
 for_window [class=TelegramDesktop] focus
 
 # Autostart applications.
-# Composition manager with default settings breaks something on my machine.
-exec --no-startup-id xcompmgr -c -l0 -t0 -r0 -o.00
+# Display Compositor.
+exec_always --no-startup-id picom
 
 # NetworkManager applet.
 exec --no-startup-id nm-applet
