@@ -33,7 +33,7 @@ font-2 = Font Awesome 5 Free Solid:pixelsize=9;2
 font-3 = Font Awesome 5 Brands:pixelsize=9;2
 
 modules-left = i3
-modules-right =  network_speed memory temperature cpu battery pulseaudio date powermenu
+modules-right =  network_speed memory temperature cpu battery pulseaudio pacman-updates date powermenu
 separator = "|"
 
 tray-position = right
@@ -172,6 +172,7 @@ type = internal/battery
 battery = BAT0
 adapter = AC
 full-at = 86
+interval = 60
 
 format-charging = "<ramp-capacity> <label-charging> CHR"
 format-discharging = <ramp-capacity> <label-discharging>
@@ -221,6 +222,16 @@ menu-0-2 = suspend
 menu-0-2-exec = systemctl suspend
 menu-0-3 = logout
 menu-0-3-exec = i3-msg exit
+
+[module/pacman-updates]
+type = custom/script
+exec = checkupdates | wc -l
+interval = 900
+label = %output%
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-prefix = " "
+format-prefix-foreground = #ffbb00
 
 [settings]
 screenchange-reload = true
